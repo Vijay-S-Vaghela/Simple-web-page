@@ -1,0 +1,544 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>AI Topic</title>
+</head>
+
+<body text="#EEEFFF" link="#FFFFAA" vlink="#FFCCFF" alink="#FFCCCC" 
+bgcolor="#016064">
+
+<!--Color Code link for Color Combination of Blue only
+    Use Diffrent Color for differnt background.
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.color-meanings.com%2Fshades-of-blue-color-names-html-hex-rgb-codes%2F&psig=AOvVaw2XBVDk_qozvS1HzeInWTKy&ust=1651854728520000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKiH4sTkyPcCFQAAAAAdAAAAABAD
+-->
+
+
+</body>
+<!-- Write your comments here 
+<a href="http://www.cs.iusb.edu/~danav/teach/c463/">C463 / B551 Artificial Intelligence</a>-->
+
+<h3 align="center"><b>AI Topics</b></h3>
+
+<p><b>Knowledge Representation</b> 
+<ul>
+
+<li>A knowledge representation (KR) is a surrogate, a substitute for
+the thing itself, used to enable an entity to determine consequences
+by thinking rather than acting, i.e., by reasoning about the world
+rather than taking action in it.
+
+<li>It has three components: (i) the representation's fundamental
+conception of intelligent reasoning; (ii) the set of inferences the
+representation sanctions; and (iii) the set of inferences it
+recommends.
+
+<li>It is a medium for pragmatically efficient computation, providing
+guidance for organizing information to facilitate making inferences.
+
+<li>It is a medium of human expression, i.e., a language in which we
+say things about the world.  </ul>
+
+<p><b>KR As Surrogate</b> 
+<ul>
+
+<li>A stand-in for things that exist in the world.
+
+<li>It is a component of the reasoning system.
+
+<li>The representation stands for something in the real world
+
+<li>there must be a connection between them 
+
+<li>this defines the semantics or meaning of the representation.
+
+<li>How close is a representation to the represented object? Which
+properties of the object should be present in the representation and
+which can be omitted?
+
+<li>Representations are imperfect: they contain simplifying
+assumptions and maybe artifacts.  
+</ul>
+
+<p><b>Ontological Engineering</b> 
+<ul>
+
+<li><i>Ontology</i> - branch of philosophy studying entities that
+exist, their classification, and the relations between them.
+
+<li>Types of entities: physical objects, abstract objects, time,
+locations, actions, events, beliefs.
+
+<li>Decisions made on imperfect representations can be wrong. We must
+choose the representation with this in mind.
+
+<li>Selecting a particular representation means making an ontological
+commitment.  </ul>
+<!-- -->
+<p><b>Ontology Example</b> <br>
+<img src="1.png">
+
+<p><b>KB and Database</b> 
+<ul>
+
+<li>The KB in a program can be represented as a relational database.
+
+<li>The larger the KB, the better its structure must be thought from
+the start.
+
+<li>The database should be consistent in terms of connectivity - if
+something changes in one place, the change must be reflected
+everywhere else.
+
+<li>The database must be unified, meaning that we must be able to use
+its various components within the same framework. A particular
+application may require more than 1 component.  
+</ul>
+
+<p><b>Expert Systems</b> 
+<ul>
+
+<li>Programs that incorporate knowledge of a particular domain and
+that can help with making decisions.
+
+<li>They often emerge from the retirement of a human expert that takes
+time and effort to replace.
+
+<li>Basic components: a knowledge base KB and an inference system.
+
+<li>The expertise is organized in rules of type "if-then" by a human
+expert.
+
+<li>For classification/diagnosis problems this often results in a
+tree.  
+</ul>
+
+<p><b>General Functionality</b> 
+<ul>
+
+<li>The user seeks a diagnosis or goal (car failure). 
+
+<li>The system asks a question, often with a yes/no answer. 
+
+<li>If this answer is not sufficient to determine the diagnosis
+completely, another question will be asked.
+
+<li>Some of the systems can allow for an undetermined answer (I don't
+know) and they can adapt to that,
+
+<li>The answer might be given with a certain probability.
+
+<li>In general they avoid asking for irrelevant input.
+</ul>
+
+<p><b>Example - Car Classification</b><br>
+<img src="2.png">
+
+<p><b>Semantic Networks</b> 
+<ul>
+
+<li>A graph notation for representing knowledge. The nodes are
+concepts and the edges are relations between them.
+
+<li><i>Definitional</i> networks - the relations are subtype or is-a. 
+
+<li><i>Assertional</i> networks are designed to assert propositions. 
+
+<li><i>Implicational</i> networks use implication to connect nodes. 
+
+<li><i>Executable</i> networks can include procedures. 
+
+<li><i>Learning</i> networks build or extend their representations by
+acquiring knowledge from examples.
+
+<li><i>Hybrid</i> networks combine two or more of the previous
+techniques.  
+</ul>
+
+<p><b>Example - Definition Network</b> <br>
+<img src="3.png">
+
+<p><b>Categories and Objects</b> 
+<ul>
+
+<li>Organizing the objects in categories.
+
+<li>Some reasoning takes places at the level of categories.
+
+<li>"I want to eat an apple." 
+
+<li>Apple(x), or Member(x, Apple) and Subset(Apple, Food).
+
+<li>The categories form a hierarchy where each class inherits the
+properties of the parent, or simply a network (apples are both food
+and fruit).
+
+<li>The categories of a class compose a taxonomy.
+</ul>
+
+<p><b>Partitioning</b> 
+<ul>
+
+<li>Two or more categories are disjoint if they are mutually exclusive
+(male/female).
+
+<li>A decomposition of a class into categories is called exhaustive if
+each object of the class must belong to at least one category
+
+<li>living = {animal,  vegetable, fungi, bacteria}
+
+<li>A partition is a an exhaustive decomposition of a class into
+disjoint subsets.
+
+<li>student = {undergraduate, graduate}
+
+<li>Related problem: clustering. Given a set of objects, find an
+appropriate category for each of them. The categories may not be
+predefined.  </ul>
+
+<p><b>Attributes</b> 
+<ul>
+
+<li>Composition: PartOf(nose, face).
+
+<li>Some categories can be defined as rules:
+
+<li>Biped(x) =&gt; <img src="exists.gif" height="17"> b1, b2 (Leg(b1)
+&amp; Leg(b2) &amp; PartOf(b1, x) &amp; PartOf(b2, x) &amp; !equal(b1,
+b2).
+
+<li>Prime(n) &lt;=&gt; (Number(n) &amp; n != 1 &amp; <img
+src="forall.gif" height="17">d (equal(n%d, 0) =&gt; (equal(d, 1) |
+(equal(d, n))))
+
+<li>Measurements: Length(x), Price(x), etc. These are functions, not
+predicates.
+
+<li>Things: 3 apples. Stuff: water, more water, some quantity of
+water.  
+</ul>
+
+<p><b>Situations</b>
+<ul>
+
+<li>Situation: a predicate that is true at a particular moment in
+time. They may also have a specific location. A particular state of
+the system.
+
+<li>Drives(Mary, car, I90, 03/15/096)
+
+<li><i>Fluent</i>: predicates and functions that can change from a
+moment to another. Happy(x).
+
+<li>Atemporal or eternal predicates: Warrior(A) will be true for as
+long as the object A exists. Alive(A) may change from a moment to the
+next.  </ul>
+
+<p><b>Actions</b> 
+<ul>
+
+<li>Predicates that represent changes in the environment. The involve
+at least a subject, often one or more objects.
+
+<li>eat(x, y), sleep(x), talk(x), say(x, y)
+
+<li>When an action is part of a situation, it can result in other
+predicates becoming true at a later moment in time.
+
+<li>(Eat(x, y, t) &amp; Apple(y)) =&gt; !Hungry(x, t+1)
+
+<li>Projection: the agent can use some rules to predict the outcome of
+its possible actions and choose the appropriate one. This is done by
+planning.  
+</ul>
+
+<p><b>Situation Calculus</b> 
+<ul>
+
+<li>Description of an action:
+
+<li>Possibility rule (precondition): a sentence that specifies when an
+action is possible.
+
+<li>has(x, y, s) &amp; apple(y) =&gt; Possible(eat(x, y), s)
+
+<li>Effect rule (postcondition): a sentence that describes the
+consequences of an action.
+
+<li>eat(x, y, s) =&gt; !exist(y, s+1)
+
+<li>collect(x, y, s) =&gt; has(x, y, s+1)
+
+<li>Frame problem: the collection of things / predicates that don't
+change.  </ul>
+
+<p><b>Time and Events</b> 
+<ul>
+
+<li>In time-based calculus the fluents are valid for particular
+moments in time instead of in a particular situation.
+
+<li>A fluent is true at a particular point in time if it was initiated
+or caused by an event in the past, and was not terminated by another
+event in the meantime.
+
+<li>Initiates(e, f, t), e-event, f-fluent, t-time.
+
+<li>Terminates(e, f, t). Happens(e, t). Clipped(f, t, t2)
+
+<li>T(f, t2) &lt;=&gt; <img src="exists.gif" height="17"> e, t
+(Happens(e, t) &amp; Initiates(e, f, t) &amp; (t &lt; t2) &amp;
+!Clipped(f, t, t2) )
+
+<li>Clipped(f, t, t2) &lt;=&gt; <img src="exists.gif" height="17"> e,
+t1 (Happens(e, t1) &amp; Terminates(e, f, t1) &amp; (t &lt; t1) &amp;
+(t1 &lt; t2) ) </ul>
+
+<p><b>Mental Processes</b> 
+<ul>
+
+<li>Does an agent know that he knows something?
+
+<li>We need to represent the fact that an agent believes something to
+be true or knows something to be true.
+
+<li>We can make inferences about things an agent believes, things that
+the agent knows, and things that are true, but the combinations are
+not always possible.
+
+<li>The inferences can be made only if the agent is a logical agent
+capable of reasoning.
+
+<li>This is called modal logic.
+</ul>
+
+<p><b>Beliefs</b> 
+<ul>
+
+<li>Believes(x, P(a)) x believes that P(a) is true.
+
+<li>Inferences are not obvious. 
+
+<li>Believes(x, P(a)) &amp; (a = b) does not imply that Believes(x,
+P(b)) is also true.
+
+<li>We can apply reasoning within the system of beliefs for a logical
+agent:
+
+<li>Believes(x, P(a)) &amp; Believes(x, P(y) =&gt; Q(y)) can imply
+that Believes(x, Q(a)).
+
+<li>We can't apply MP if the agent doesn't know or believe that P(y)
+=&gt; Q(y).  
+</ul>
+
+<p><b>Knowledge and Belief</b> 
+<ul>
+
+<li>Knows(x, P(a)) is similar to Believes, but the fact P(a) must be
+true.
+
+<li>KnowsWhether(x, P(a)) means Knows(x, P(a)) | Knows(x, !P(a)).
+
+<li>KnowsWhat(x, EyeColor(a)) means that <img src="exists.gif"
+height="17"> y Color(y) &amp; Knows(x, (EyeColor(a) = y)).
+
+<li>Believes(x, P(a)) &amp; Knows(x, P(y)=&gt;Q(y)) implies
+Believes(x, Q(a)).
+
+<li>Knows(x, P(a)) &amp; Believes (x, P(y)=&gt;Q(y)) implies
+Believes(x, Q(a)).
+
+<li>Knows(x, P(a)) &amp; Knows(x, P(y)=&gt;Q(y)) implies Knows(x,
+Q(a)).  
+</ul>
+
+<p><b>Fuzzy Logic</b> 
+<ul>
+
+<li>First author: Lotfi Zadeh, University of California at Berkley,
+1965.
+
+<li><b>Def.</b> Part of logic dealing with approximate reasoning,
+derived from the fuzzy set theory.
+
+<li>A fuzzy set is one to which elements belong with a given
+percentage.
+
+<li>In fuzzy logic the truth values belong to the interval [0, 1]
+representing a percentage of truth.
+
+<li>It is better suited to represent imprecise information/attributes
+from the real world and to make appropriate inferences.  </ul>
+
+<p><b>Fuzzy Logic Expressions</b> 
+<ul>
+
+<li>Classic logic: "Bill is a tall person."
+
+<li>Tall(Bill) or Attribute(Bill, Tall) or 
+
+<li>in terms of sets, Bill belongs to TallPeopleSet
+
+<li>Fuzzy logic: "Bill is 80% tall."
+
+<li>Tall(Bill) = 0.8 or
+
+<li>Bill belongs to TallPeopleSet by 80%
+
+<li>We can also describe Bill as "quite tall" (80%) or "very
+tall"(95%) or "almost tall" (60%).
+
+<li>It can apply to any comparable attributes:
+
+<li>"Bill is taller than John."
+
+<li>Tall(Bill) > Tall(John)
+</ul>
+
+<p><b>Hedges</b> 
+<ul>
+
+<li>Hedges were introduced by Zadeh (MIT/IBM) and Lakoff (Berkley) 
+in fuzzy logic and represent modifier to fuzzy sets:
+
+<li>All-purpose: very, quite, extremely
+
+<li>Truth values: quite true, mostly false
+
+<li>Probabilities: likely, not very likely
+
+<li>Quantifiers, most, several, few
+
+<li>Possibilities, like almost impossible, quite possible.
+</ul>
+
+<p><b>Examples of Deductions</b> 
+<ul>
+
+<li>This stream is narrow.
+
+<li>This stream and that stream are approximately equal.
+
+<li>Thus, that stream is more or less narrow.
+
+<li>Most men are vain.
+
+<li>Socrates is a man.
+
+<li>Thus, Socrates is most likely vain.
+</ul>
+
+<p><b>FL Versus Probabilities</b> 
+<ul>
+
+<li><i>Classic logic:</i> "The pony is pretty." 
+
+<li>Either True or False.
+
+<li><i>Fuzzy logic:</i> "The pony is 90% pretty."
+
+<li>This means that about 90% of the people looking at the pony will
+think it's pretty. We're talking about one particular pony.
+
+<li><i>Probabilities:</i> "The pony has 90% chances to be pretty." 
+
+<li>This means that for the given population of ponies in our model,
+90% of them are pretty. So 9 out of 10 ponies picked at random are
+expected to be pretty.  
+</ul>
+
+<p><b>Operators</b> 
+<ul>
+
+<li>Zadeh operators:
+
+<li>or - value(A | B ) = max{value(A), value(B)}
+
+<li>and - value(A &amp; B) = min{value(A), value(B)}
+
+<li>not - value(!A) = 1-value(A)
+
+<li>Example: Annie is 90% tired and 75% cranky. Then Annie is
+
+<li>90% tired or cranky, 
+
+<li>75% tired and cranky,
+
+<li>10% rested, and
+
+<li>25% is in a good mood.
+
+<li>Other more complex metrics are also available.
+</ul>
+
+<p><b>Applications</b> 
+<ul>
+
+<li>Automobile subsystems, such as ABS and cruise control 
+
+<li>Microcontrollers, microprocessors, robotics.
+
+<li>Air conditioners, cameras, dishwashers, elevators.
+
+<li>Search engines (web)
+
+<li>The MASSIVE engine used in the Lord of the Rings films to create
+huge scale armies with random but somewhat orderly movements
+
+<li>Digital image processing, edge detection.
+
+<li>AI agents for games
+
+<li>Language filters on message boards for filtering out offensive
+text.  
+</ul>
+
+<p><b>Fuzzy Controller</b> 
+<ul>
+
+<li>A controller using fuzzy values for variables and rules like 
+
+<li>IF variable IS value THEN action
+
+<li>The rules are not mutually exclusive.
+
+<li>Example: controller for an air conditioner:
+
+<li>IF temperature IS very cold THEN stop fan 
+
+<li>IF temperature IS cold THEN turn down fan 
+
+<li>IF temperature IS normal THEN maintain level 
+
+<li>IF temperature IS hot THEN speed up fan 
+</ul>
+
+<p><b>Example of Fuzzy Sets - car speed</b><br>
+<img src="4.png">
+
+<p><b>Fuzzy Controller Structure</b><br>
+<img src="5.png">
+
+<p><b>Example of Fuzzification - car speed</b><br>
+<img src="6.png">
+
+<p><b>Defuzification Example</b> 
+<ul>
+
+<li>Rule1: If the car is slow then increase the speed by 10.
+<li>Since we got a 0.75% slow -> +10*0.75
+<li>Rule2: If the car is fast, then decrease the speed by 10.
+<li>Fuzzy value for fast = 0.25 => -10*0.25.
+<li>Crisp answer: <br>
+(10*0.75 � 10*0.25)/(0.75+0.25)  = +5
+</ul>
+
+</body>
+
+</html>
+<!-- For More Projects like This 
+     Contact Us here...
+     https://forms.gle/CBYBFso7t8gAbeUR7  
+     Thank you for using this Project. -->
